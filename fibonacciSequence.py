@@ -10,6 +10,7 @@ def run():
             i += 1
         resultWin = ctk.CTk()
         resultWin.title("Result")
+        resultWin.resizable(False, False)
         if checkbox.get() == 1:
             result = ctk.CTkLabel(resultWin, bg_color = "transparent", text = str(seeds).strip("[]"), font = ("Arial", 35))
         else:
@@ -19,6 +20,7 @@ def run():
     except:
         resultWin = ctk.CTk()
         resultWin.title("Error")
+        resultWin.resizable(False, False)
         result = ctk.CTkLabel(resultWin, bg_color = "transparent", text = "Invalid Input", font = ("Arial", 35))
         result.pack(padx = 10, pady = 10)
         resultWin.mainloop()
@@ -28,6 +30,7 @@ ctk.set_appearance_mode("dark")
 window = ctk.CTk()
 window.title("Fibonacci Sequence")
 window.geometry("500x280")
+window.resizable(False, False)
 
 title = ctk.CTkLabel(window, width = 35, height = 35, bg_color = "transparent", text = "Fibonacci Sequence", font = ("Arial", 35))
 title.pack(pady = 10)
