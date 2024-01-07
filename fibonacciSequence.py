@@ -8,7 +8,7 @@ def run():
         while i < int(iterate)-2:
             seeds.append(seeds[-1] + seeds[-2])
             i += 1
-        resultWin = ctk.CTk()
+        resultWin = ctk.CTkToplevel()
         resultWin.title("Result")
         resultWin.resizable(False, False)
         if checkbox.get() == 1:
@@ -16,14 +16,12 @@ def run():
         else:
             result = ctk.CTkLabel(resultWin, bg_color = "transparent", text = str(seeds[-1]), font = ("Arial", 35))
         result.pack(padx = 10 , pady = 10)
-        resultWin.mainloop()
     except:
-        resultWin = ctk.CTk()
+        resultWin = ctk.CTkToplevel()
         resultWin.title("Error")
         resultWin.resizable(False, False)
         result = ctk.CTkLabel(resultWin, bg_color = "transparent", text = "Invalid Input", font = ("Arial", 35))
         result.pack(padx = 10, pady = 10)
-        resultWin.mainloop()
 
 ctk.set_appearance_mode("dark")
 
